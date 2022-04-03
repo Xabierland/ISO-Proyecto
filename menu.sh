@@ -17,7 +17,7 @@ do
     echo -e "2)\t Crear entorno de trabajo"
     echo -e "3)\t Copiar proyecto al entorno"
     echo -e "4)\t Iniciar servidor"
-    echo -e "5)\t Cerrar servidor1"
+    echo -e "5)\t Cerrar servidor"
 	echo -e "9)\t Fin \n"
     read -p "Elige una opcion: " opcionmenuppal
     echo ""
