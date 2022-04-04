@@ -2,21 +2,29 @@
 
 ##Instalacion y Mantenimiento de una Aplicación Web
 #Importar funciones de otros ficheros
-                                                    #ToDo
-. ./script/instalarNGINX.sh
-. ./script/arrancarNGINX.sh
-. ./script/testearPuertoNGINX.sh
-. ./script/visualizarINDEX.sh
-. ./script/personalizarINDEX.sh
-. ./script/crearNuevaUbicacion.sh
-. ./script/ejecutarEntornoVirtual.sh
-. ./script/instalarLibreriasEntornoVirtual.sh
-. ./script/copiarFicheroProyectoNuevaUbicacion.sh
-. ./script/instalarFlask.sh
-. ./script/probarFlask.sh                           # INTENTAR INICIAR EL COMANDO EN OTRA SHELL
-. ./script/instalarGunicorn.sh
-. ./script/configurarGunicorn.sh
-. ./script/salirMenu.sh
+                                                    #00 ToDo
+. ./script/instalarNGINX.sh                         #01
+. ./script/arrancarNGINX.sh                         #02
+. ./script/testearPuertoNGINX.sh                    #03
+. ./script/visualizarINDEX.sh                       #04
+. ./script/personalizarINDEX.sh                     #05
+. ./script/crearNuevaUbicacion.sh                   #06
+. ./script/ejecutarEntornoVirtual.sh                #07
+. ./script/instalarLibreriasEntornoVirtual.sh       #08
+. ./script/copiarFicheroProyectoNuevaUbicacion.sh   #09
+. ./script/instalarFlask.sh                         #10
+. ./script/probarFlask.sh                           #11 INTENTAR INICIAR EL COMANDO EN OTRA SHELL
+. ./script/instalarGunicorn.sh                      #12
+. ./script/configurarGunicorn.sh                    #13
+. ./script/pasarPropiedadYPermisos.sh               #14
+. ./script/crearServicioSystemdFlask.sh             #15
+. ./script/configurarNginxProxyInverso.sh           #16
+. ./script/cargarFicherosConfiguracionNginx.sh      #17
+. ./script/rearrancarNginx.sh                       #18
+. ./script/testearVirtualHost.sh                    #19
+. ./script/verNginxLogs.sh                          #20
+. ./script/controlarIntentosConexionSSH.sh          #21
+. ./script/salirMenu.sh                             #22
 
 ### Main ###
 opcionmenuppal=0
