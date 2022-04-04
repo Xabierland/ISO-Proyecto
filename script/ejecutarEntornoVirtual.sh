@@ -1,7 +1,7 @@
-function instalarPaquetes()
+function ejecutarEntornoVirtual
 {
     declare -a lista_paquetes
-    lista_paquetes=( "nginx" "python3" "python3-pip" "python3-dev" "build-essential" "libssl-dev" "libffi-dev" "python3-setuptools" "python3-venv" )
+    lista_paquetes=( "python3" "python3-pip" "python3-dev" "build-essential" "libssl-dev" "libffi-dev" "python3-setuptools" "python3-venv" )
 
     for i in "${lista_paquetes[@]}"
     do
@@ -17,4 +17,9 @@ function instalarPaquetes()
         echo "$nombre ya estaba instalado"
         fi 
     done
+
+    echo "Creando entorno virtual de python..."
+    sudo virtualenv -p python3 /var/www/EHU_analisisdesentimiento/public_html/venv 
+    echo "Activando..."
+    source /var/www/EHU_analisisdesentimiento/public_html/venv/bin/activate
 }

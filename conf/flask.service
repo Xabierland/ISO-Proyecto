@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to server Flask
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/EHU_analisisdesentimiento/public_html
+Environment="PATH=/var/www/EHU_analisisdesentimiento/public_html/venv/bin"
+ExecStart=/var/www/EHU_analisisdesentimiento/public_html/venv/bin/gunicorn --workers 1 --bind 0.0.0.0:5000 /var/www/EHU_analisisdesentimiento/public_html/wsgi:app
+
+[Install]
+WantedBy=multi-user.target
