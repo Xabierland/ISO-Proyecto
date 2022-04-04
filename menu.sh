@@ -5,6 +5,7 @@
 . ./script/instalarPaquetes.sh
 . ./script/fin.sh
 . ./script/crearEntorno.sh
+. ./script/copiarProyecto.sh
 
 ### Main ###
 opcionmenuppal=0
