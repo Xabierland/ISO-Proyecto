@@ -22,4 +22,6 @@ function ejecutarEntornoVirtual
     sudo virtualenv -p python3 /var/www/EHU_analisisdesentimiento/public_html/venv 
     echo "Activando..."
     source /var/www/EHU_analisisdesentimiento/public_html/venv/bin/activate
+    echo ""
+    read -p "PULSA CUALQUIER TECLA PARA CONTINUAR..."
 }

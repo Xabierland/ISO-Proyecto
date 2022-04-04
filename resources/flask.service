@@ -3,11 +3,11 @@ Description=Gunicorn instance to server Flask
 After=network.target
 
 [Service]
-User=www-data
+User=xabierland
 Group=www-data
 WorkingDirectory=/var/www/EHU_analisisdesentimiento/public_html
 Environment="PATH=/var/www/EHU_analisisdesentimiento/public_html/venv/bin"
-ExecStart=/var/www/EHU_analisisdesentimiento/public_html/venv/bin/gunicorn --workers 1 --bind 0.0.0.0:5000 /var/www/EHU_analisisdesentimiento/public_html/wsgi:app
+ExecStart=/var/www/EHU_analisisdesentimiento/public_html/venv/bin/gunicorn --workers 1 --bind 127.0.0.1:5000 -m 007 wsgi:app
 
 [Install]
 WantedBy=multi-user.target

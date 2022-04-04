@@ -15,5 +15,8 @@ function crearNuevaUbicacion
         sudo mkdir -p /var/www/EHU_analisisdesentimiento/public_html
         echo "Cambiando permisos del directorio..."
         sudo chown -R $user:$user /var/www/EHU_analisisdesentimiento
+        echo ""
+        read -p "PULSA CUALQUIER TECLA PARA CONTINUAR..."
     fi
+    
 }

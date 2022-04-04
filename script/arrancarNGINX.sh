@@ -8,4 +8,6 @@ function arrancarNGINX
         echo -e "Activando NGINX..."
         sudo service nginx start
     fi
+    echo ""
+    read -p "PULSA CUALQUIER TECLA PARA CONTINUAR..."
 }
