@@ -2,18 +2,20 @@
 
 ##Instalacion y Mantenimiento de una Aplicación Web
 #Importar funciones de otros ficheros
+                                                    #ToDo
 . ./script/instalarNGINX.sh
 . ./script/arrancarNGINX.sh
 . ./script/testearPuertoNGINX.sh
 . ./script/visualizarINDEX.sh
-
+. ./script/personalizarINDEX.sh
 . ./script/crearNuevaUbicacion.sh
 . ./script/ejecutarEntornoVirtual.sh
 . ./script/instalarLibreriasEntornoVirtual.sh
 . ./script/copiarFicheroProyectoNuevaUbicacion.sh
 . ./script/instalarFlask.sh
-. ./script/probarFlask.sh
-
+. ./script/probarFlask.sh                           # INTENTAR INICIAR EL COMANDO EN OTRA SHELL
+. ./script/instalarGunicorn.sh
+. ./script/configurarGunicorn.sh
 . ./script/salirMenu.sh
 
 ### Main ###
@@ -57,7 +59,7 @@ do
         8) instalarLibreriasEntornoVirtual;;
         9) copiarFicheroProyectoNuevaUbicacion;;
         10) instalarFlask;;
-        11) probarFlask;;
+        11) probarFlask.sh;;
         12) instalarGunicorn;;
         13) configurarGunicorn;;
         14) pasarPropiedadYPermisos;;

@@ -7,7 +7,7 @@ function crearNuevaUbicacion
         if [ $opcion == "s" -o $opcion == "S" ]
         then
             sudo rm -R /var/www/EHU_analisisdesentimiento/
-            crearEntorno
+            crearNuevaUbicacion
         fi
     else
         user = whoami
