@@ -72,6 +72,7 @@ do
     echo -e "22)   Salir del menu\n"
     read -p "Elige una opcion: " opcionmenuppal
     echo ""
+    clear
 	case $opcionmenuppal in
         1) instalarNGINX;;
         2) arrancarNGINX;;
