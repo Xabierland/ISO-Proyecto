@@ -10,7 +10,7 @@ function crearNuevaUbicacion
             crearNuevaUbicacion
         fi
     else
-        user = whoami
+        user=$(id -u -n) #TAMBIEN whoami
         echo "Creando directorio..."
         sudo mkdir -p /var/www/EHU_analisisdesentimiento/public_html
         echo "Cambiando permisos del directorio..."

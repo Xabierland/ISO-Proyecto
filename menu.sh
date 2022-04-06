@@ -26,6 +26,21 @@
 . ./script/controlarIntentosConexionSSH.sh          #21 x
 . ./script/salirMenu.sh                             #22 ✓
 
+#INSTALAR PAQUETES IMPORTANTES PARA FUNCIONAMIENTO DEL SCRIPT
+REQUIRED_PKG="aptitude"
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
+echo Comprobando instalacion de for $REQUIRED_PKG: $PKG_OK
+if [ "" = "$PKG_OK" ]; then
+    echo "$REQUIRED_PKG no esta instalado. Configurando $REQUIRED_PKG."
+    sudo apt-get --yes install $REQUIRED_PKG 
+fi
+REQUIRED_PKG="git"
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
+echo Comprobando instalacion de for $REQUIRED_PKG: $PKG_OK
+if [ "" = "$PKG_OK" ]; then
+    echo "$REQUIRED_PKG no esta instalado. Configurando $REQUIRED_PKG."
+    sudo apt-get --yes install $REQUIRED_PKG 
+fi
 ### Main ###
 opcionmenuppal=0
 while test $opcionmenuppal -ne 22
