@@ -18,5 +18,5 @@ function controlarIntentosConexionSSH
     done
 
     echo ""
-    read -p "PULSA CUALQUIER TECLA PARA CONTINUAR..."
+    read -p "PULSA ENTER PARA CONTINUAR..."
 }

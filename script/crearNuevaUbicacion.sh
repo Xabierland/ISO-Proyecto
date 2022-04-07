@@ -16,7 +16,7 @@ function crearNuevaUbicacion
         echo "Cambiando permisos del directorio..."
         sudo chown -R $user:$user /var/www/EHU_analisisdesentimiento
         echo ""
-        read -p "PULSA CUALQUIER TECLA PARA CONTINUAR..."
+        read -p "PULSA ENTER PARA CONTINUAR..."
     fi
     
 }

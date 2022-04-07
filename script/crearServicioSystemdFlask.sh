@@ -6,5 +6,5 @@ function crearServicioSystemdFlask
     sudo systemctl start flask
     sudo systemctl enable flask
     echo ""
-    read -p "PULSA CUALQUIER TECLA PARA CONTINUAR..."
+    read -p "PULSA ENTER PARA CONTINUAR..."
 }

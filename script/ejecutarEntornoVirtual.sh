@@ -23,5 +23,5 @@ function ejecutarEntornoVirtual
     echo "Activando..."
     source /var/www/EHU_analisisdesentimiento/public_html/venv/bin/activate
     echo ""
-    read -p "PULSA CUALQUIER TECLA PARA CONTINUAR..."
+    read -p "PULSA ENTER PARA CONTINUAR..."
 }

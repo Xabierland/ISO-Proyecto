@@ -23,9 +23,8 @@
 . ./script/rearrancarNginx.sh                       #18 ✓
 . ./script/testearVirtualHost.sh                    #19 ✓
 . ./script/verNginxLogs.sh                          #20 ✓
-. ./script/controlarIntentosConexionSSH.sh          #21 x
+. ./script/controlarIntentosConexionSSH.sh          #21 ✓
 . ./script/salirMenu.sh                             #22 ✓
-
 #INSTALAR PAQUETES IMPORTANTES PARA FUNCIONAMIENTO DEL SCRIPT
 REQUIRED_PKG="aptitude"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
@@ -41,7 +40,8 @@ if [ "" = "$PKG_OK" ]; then
     echo "$REQUIRED_PKG no esta instalado. Configurando $REQUIRED_PKG."
     sudo apt-get --yes install $REQUIRED_PKG 
 fi
-### Main ###
+
+###* Main *###
 opcionmenuppal=0
 while test $opcionmenuppal -ne 22
 do

@@ -12,5 +12,5 @@ function instalarNGINX
     echo "$nombre ya estaba instalado"
     fi 
     echo ""
-    read -p "PULSA CUALQUIER TECLA PARA CONTINUAR..."
+    read -p "PULSA ENTER PARA CONTINUAR..."
 }

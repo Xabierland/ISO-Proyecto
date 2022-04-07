@@ -9,5 +9,5 @@ function arrancarNGINX
         sudo service nginx start
     fi
     echo ""
-    read -p "PULSA CUALQUIER TECLA PARA CONTINUAR..."
+    read -p "PULSA ENTER PARA CONTINUAR..."
 }

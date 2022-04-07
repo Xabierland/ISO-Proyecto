@@ -1,4 +1,5 @@
 function testearVirtualHost
 {
-    aux=$(xdg-open http://127.0.0.1:8888/)
+    miip=$(ifconfig | grep "inet" | head -n1 | awk '{print $2}')
+    aux=$(xdg-open http://$miip:8888/)
 }
