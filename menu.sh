@@ -41,13 +41,15 @@ if [ "" = "$PKG_OK" ]; then
     sudo apt-get --yes install $REQUIRED_PKG 
 fi
 
+
 ###* Main *###
 opcionmenuppal=0
 while test $opcionmenuppal -ne 22
 do
 	#Muestra el menu
     clear
-    echo -e "\n======MENU DE INSTALACION======"
+    cat ./resources/title.txt
+    echo -e "\n===============MENU DE INSTALACION==============="
     echo -e "01)   Instalar NGINX"
     echo -e "02)   Arrancar NGINX"
     echo -e "03)   Testear Puerto NGINX"
