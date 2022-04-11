@@ -25,6 +25,7 @@
 . ./script/verNginxLogs.sh                          #20 ✓
 . ./script/controlarIntentosConexionSSH.sh          #21 ✓
 . ./script/salirMenu.sh                             #22 ✓
+
 #INSTALAR PAQUETES IMPORTANTES PARA FUNCIONAMIENTO DEL SCRIPT
 REQUIRED_PKG="aptitude"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")

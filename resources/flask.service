@@ -3,7 +3,7 @@ Description=Gunicorn instance to server Flask
 After=network.target
 
 [Service]
-User=xabierland
+User=www-data
 Group=www-data
 WorkingDirectory=/var/www/EHU_analisisdesentimiento/public_html
 Environment="PATH=/var/www/EHU_analisisdesentimiento/public_html/venv/bin"

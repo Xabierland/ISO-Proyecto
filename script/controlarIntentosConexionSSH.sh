@@ -8,10 +8,10 @@ function controlarIntentosConexionSSH
         fileType=$(file -i $i | awk '{print $2}')
         if [ $fileType = 'text/plain;' ]
         then
-            cat $i | grep "sshd" |grep -E "Accepted|Failed" | awk '{print "Status: ["$6"]\tAccount name: "$9"\tDate: "$1,$2", "$3}'
+            cat $i | grep "sshd" | awk '{if ($6 == "Accepted" || $6 == "Failed") print "Status: ["$6"]\tAccount name: "$9"\tDate: "$1,$2", "$3}'
         elif [ $fileType = 'application/gzip;' ]
         then
-            zcat $i | grep "sshd" |grep -E "Accepted|Failed" | awk '{print "Status: ["$6"]\tAccount name: "$9"\tDate: "$1,$2", "$3}'
+            zcat $i | grep "sshd" | awk '{if ($6 == "Accepted" || $6 == "Failed") print "Status: ["$6"]\tAccount name: "$9"\tDate: "$1,$2", "$3}'
         else
             echo -e "Algo a salido mal\nValor evaluado: $fileType"
         fi
