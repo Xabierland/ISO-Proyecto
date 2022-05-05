@@ -45,7 +45,7 @@ fi
 
 ###* Main *###
 opcionmenuppal=0
-while test $opcionmenuppal -ne 22
+while test $opcionmenuppal -ne 23
 do
 	#Muestra el menu
     clear
@@ -72,7 +72,7 @@ do
     echo -e "19)   Testear el host virtual"
     echo -e "20)   Ver el Log de NGINX"
     echo -e "21)   Controlar intentos de conexion mediante SSH"
-    echo -e "22)   Salir del menu\n"
+    echo -e "23)   Salir del menu\n"
     read -p "Elige una opcion: " opcionmenuppal
     echo ""
     clear
@@ -98,7 +98,8 @@ do
         19) testearVirtualHost;;
         20) verNginxLogs;;
         21) controlarIntentosConexionSSH;;
-        22) salirMenu;;
+        22) ;;  #PARA EL EXAMEN
+        23) salirMenu;;
         *) salirMenu;;
 	esac 
 done 
