@@ -13,6 +13,8 @@ sudo rm /etc/systemd/system/flask.service
 
 sudo service nginx stop
 sudo rm /etc/nginx/conf.d/flask.conf
+
+sudo systemctl daemon-reload
 echo -e "\nBorrado, tenga un buen dia."
 else
     exit 0
