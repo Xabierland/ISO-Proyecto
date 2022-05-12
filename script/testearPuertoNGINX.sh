@@ -13,5 +13,5 @@ function testearPuertoNGINX
     # SALIDA DONDE SE VE EL PUERTO
     out=$(sudo netstat -anp | grep nginx)
     echo -e "$out\n"
-    read -p "PULSA CUALQUIER TECLA PARA CONTINUAR..." o
+    read -p "PULSA CUALQUIER TECLA PARA CONTINUAR..."
 }

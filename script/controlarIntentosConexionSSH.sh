@@ -14,7 +14,7 @@ function controlarIntentosConexionSSH
             zcat $i | grep "sshd" | awk '{if ($6 == "Accepted" || $6 == "Failed") print "Status: ["$6"]\tAccount name: "$9"\tDate: "$1,$2", "$3}'
         elif [ $fileType = 'application/octet-stream;' ]
         then
-        cat $i | grep "sshd" | awk '{if ($6 == "Accepted" || $6 == "Failed") print "Status: ["$6"]\tAccount name: "$9"\tDate: "$1,$2", "$3}'
+            cat $i | grep "sshd" | awk '{if ($6 == "Accepted" || $6 == "Failed") print "Status: ["$6"]\tAccount name: "$9"\tDate: "$1,$2", "$3}'
         else
             echo -e "Algo a salido mal\nValor evaluado: $fileType en $i\n"
         fi

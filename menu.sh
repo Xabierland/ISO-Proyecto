@@ -24,11 +24,12 @@
 . ./script/testearVirtualHost.sh                    #19 ✓
 . ./script/verNginxLogs.sh                          #20 ✓
 . ./script/controlarIntentosConexionSSH.sh          #21 ✓
-. ./script/salirMenu.sh                             #22 ✓
+. ./script/#EXAMEN                                  #22 x
+. ./script/salirMenu.sh                             #23 ✓
 
 #INSTALAR PAQUETES IMPORTANTES PARA FUNCIONAMIENTO DEL SCRIPT
 REQUIRED_PKG="aptitude"
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed") 
 echo Comprobando instalacion de for $REQUIRED_PKG: $PKG_OK
 if [ "" = "$PKG_OK" ]; then
     echo "$REQUIRED_PKG no esta instalado. Configurando $REQUIRED_PKG."
@@ -72,6 +73,7 @@ do
     echo -e "19)   Testear el host virtual"
     echo -e "20)   Ver el Log de NGINX"
     echo -e "21)   Controlar intentos de conexion mediante SSH"
+    echo -e "22)   Examen"
     echo -e "23)   Salir del menu\n"
     read -p "Elige una opcion: " opcionmenuppal
     echo ""
@@ -103,3 +105,21 @@ do
         *) salirMenu;;
 	esac 
 done 
+
+#PARA EL EXAMEN
+#Operator                        Description
+#! EXPRESSION                    The EXPRESSION is false.
+#-n STRING                        The length of STRING is greater than zero.
+#-z STRING                        The lengh of STRING is zero (ie it is empty).
+#STRING1 = STRING2                STRING1 is equal to STRING2
+#STRING1 != STRING2                STRING1 is not equal to STRING2
+#INTEGER1 -eq INTEGER2            INTEGER1 is numerically equal to INTEGER2
+#INTEGER1 -gt INTEGER2            INTEGER1 is numerically greater than INTEGER2
+#INTEGER1 -lt INTEGER2            INTEGER1 is numerically less than INTEGER2
+#-d FILE                        FILE exists and is a directory.
+#-e FILE                        FILE exists.
+#-r FILE                        FILE exists and the read permission is granted.
+#-s FILE                        FILE exists and it's size is greater than zero (ie. it is not empty).
+#-w FILE                        FILE exists and the write permission is granted.
+#-x FILE                        FILE exists and the execute permission is granted.
+#-a                             Longitud variable
